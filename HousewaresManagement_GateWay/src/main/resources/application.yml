@@ -1,0 +1,32 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: QL-thiet-bi-sua-nha_APIGateway
+  cloud:
+    gateway:
+      routes:
+        - id: USER-SERVICES
+          uri: lb://USER-SERVICES
+          predicates:
+            - Path=/api/user-service/**
+        - id: PRODUCT-SERVICES
+          uri: lb://PRODUCT-SERVICES
+          predicates:
+            - Path=/api/product-service/**
+        - id: CUSTOMER-SERVICES
+          uri: lb://CUSTOMER-SERVICES
+          predicates:
+            - Path=/api/customer-service/**
+  main:
+    web-application-type: reactive
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+    instance:
+      hostname: localhost

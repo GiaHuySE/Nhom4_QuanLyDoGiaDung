@@ -2,12 +2,14 @@ package com.example.housewaresmanagement_gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-public class HousewaresManagementGateWayApplication {
+@EnableDiscoveryClient
+public class HousewaresManagementGatewayApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(HousewaresManagementGateWayApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(HousewaresManagementGatewayApplication.class, args);
+	}
 
 }
