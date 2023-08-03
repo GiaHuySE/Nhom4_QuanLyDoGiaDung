@@ -1,0 +1,33 @@
+.content {
+	border-top: 1px solid cyan;
+	flex-direction: column;
+	margin-top: 2%;
+	height: 100%;
+}
+
+.btnBackToHome {
+	text-decoration: none;
+	background-color: black;
+	border: 2px solid cyan;
+	border-radius: 10px;
+	color: cyan;
+	display: inline-block;
+	font-size: 1em;
+	padding: 8px;
+	transition: 0.35s;
+}
+
+.btnBackToHome:hover {
+	text-decoration: none;
+	background-color: white;
+	color: black;
+}
+
+.btnAdd {
+	text-decoration: none;
+	width: 150px;
+}
+
+
+
+
